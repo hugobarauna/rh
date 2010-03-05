@@ -1,0 +1,10 @@
+.autotest
+log/*
+tmp/*
+*~
+coverage/*
+public/system/*
+public/cache/*
+public/uploads/*
+*.sqlite3*
+capybara*.html
