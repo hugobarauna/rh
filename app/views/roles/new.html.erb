@@ -1,16 +1,24 @@
-<h1>Novo Cargo	</h1>
+<div id="block-forms" class="block">
+	<div class="secondary-navigation">
+	</div>
 
-<% form_for(@role) do |f| %>
-  <%= f.error_messages %>
+	<div class="content">
+		<h2>Novo Cargo</h2>
+		<div class="inner">
+			<% form_for(@role) do |f| %>
+			  <%= f.error_messages %>
 
-  <p>
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
-  </p>
+			  <p>
+			    <%= f.label :name, 'Nome' %><br />
+			    <%= f.text_field :name %>
+			  </p>
 
-  <p>
-    <%= f.submit 'Criar' %>
-  </p>
-<% end %>
+			  <p>
+			    <%= f.submit 'Criar' %>
+			  </p>
+			<% end %>
 
-<%= link_to 'Voltar', roles_path %>
+			<%= link_to 'Voltar', roles_path %>
+		</div>
+	</div>
+</div>

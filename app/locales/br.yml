@@ -37,3 +37,17 @@ br:
     attributes:
       role:
         name: Nome
+
+  web-app-theme: 
+    save: Salvar
+    cancel: Cancelar
+    list: Listar
+    edit: Editar
+    new: Novo
+    show: Ver
+    delete: Deletar
+    confirm: Você tem certeza?
+    created_at: Criado em
+    all: Todos
+    profile: Perfil
+    settings: Configurações
