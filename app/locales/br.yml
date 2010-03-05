@@ -1,0 +1,39 @@
+br:
+    
+  simple_form:
+    'yes': 'Sim'
+    'no': 'Não'
+    buttons:
+      create: 'Adicionar {{model}}'
+      update: 'Alterar {{model}}'
+      submit: 'Enviar {{model}}'
+    required:
+      text: 'obrigatório'
+      mark: '*'
+
+  will_paginate:
+    options:
+      previous_label: '&laquo; Anterior'
+      next_label: 'Próximo &raquo;'
+    page_entries_info:
+      no_records_found: 'Nenhum resultado encontrado'
+      showing_one_record: '1 resultado'
+      showing_all_records: 'Todos os {{size}} resultados'
+      showing_records_between: 'Resultados {{start}} a {{end}} de {{size}}'
+
+  flash:
+    actions:
+      create:
+        notice: '{{resource_name}} foi criado com sucesso.'
+      update:
+        notice: '{{resource_name}} foi atualizado com sucesso.'
+      destroy:
+        notice: '{{resource_name}} foi removido com sucesso.'
+  
+  activerecord:
+    models:
+      role: Cargo
+ 
+    attributes:
+      role:
+        name: Nome
