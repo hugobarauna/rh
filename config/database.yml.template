@@ -1,3 +1,7 @@
+# How to use this?
+# Copy this file to config/database.yml and configure it with your MySQL credentials
+#
+#
 # MySQL.  Versions 4.1 and 5.0 are recommended.
 #
 # Install the MySQL driver:
