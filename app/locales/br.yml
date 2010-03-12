@@ -34,6 +34,7 @@ br:
     models:
       role: Cargo
       benefit: Benefício
+      employee: Funcionário
  
     attributes:
       role:
@@ -41,6 +42,11 @@ br:
       benefit:
         name: Nome
         value: Valor
+      employee:
+        name: Nome
+        hired_on: Contratado em
+        fired_on: Demitido em
+        salary: Salário
 
   web-app-theme: 
     save: Salvar

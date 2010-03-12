@@ -1,4 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :employees
+
   map.root :controller => "roles"
   
   map.resources :benefits, :except => :show

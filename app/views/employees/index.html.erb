@@ -1,0 +1,35 @@
+<div id="block-tables" class="block">
+	<div class="secondary-navigation">
+	</div>
+	
+	<div class="content">
+    <h2 class="title">Listando Funcionários</h2>
+    <div class="inner">
+      <table class="table">
+				<tbody>
+				  <tr>
+				    <th>Nome</th>
+						<th class="last">&nbsp;</th>
+				  </tr>
+					<% @employees.each do |employee| %>
+					  <tr>
+					    <td><%=h employee.name %></td>
+							<td class="last">
+						    <%= link_to 'Visualizar', employee %>
+						    <%= link_to 'Editar', edit_employee_path(employee) %>
+						    <%= link_to 'Deletar', employee, :confirm => 'Você tem certeza?', :method => :delete %>
+							</td>
+					  </tr>
+					<% end %>
+				</tbody>
+			</table>
+		
+			<div class="actions-bar wat-cf">
+        <div class="pagination">
+        </div>
+      </div>
+			<%= link_to 'Novo Funcionário', new_employee_path %>
+		</div>
+	</div>
+
+</div>

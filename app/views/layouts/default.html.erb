@@ -19,7 +19,7 @@
       <div id="main-navigation">
         <ul class="wat-cf">
         	<%= li_active_by_controller "roles", link_to("Cargos", roles_path) %>
-					<li><a href="#">Funcionarios</a></li>
+					<%= li_active_by_controller "employees", link_to("Funcionários", employees_path) %>
 					<%= li_active_by_controller "benefits", link_to("Benefícios", benefits_path) %>
         </ul>
       </div>

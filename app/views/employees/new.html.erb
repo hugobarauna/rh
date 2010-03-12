@@ -1,0 +1,35 @@
+<div id="block-forms" class="block">
+	<div class="secondary-navigation">
+	</div>
+
+	<div class="content">
+		<h2>Novo Funcionário</h2>
+		<div class="inner">
+			<% form_for(@employee) do |f| %>
+			  <%= f.error_messages %>
+
+			  <p>
+			    <%= f.label :name, 'Nome' %><br />
+			    <%= f.text_field :name %>
+			  </p>
+			  <p>
+			    <%= f.label :hired_on, 'Contratado em' %><br />
+			    <%= f.date_select :hired_on %>
+			  </p>
+			  <p>
+			    <%= f.label :fired_on, 'Demitido em' %><br />
+			    <%= f.date_select :fired_on %>
+			  </p>
+			  <p>
+			    <%= f.label :salary, 'Salário' %><br />
+			    <%= f.text_field :salary %>
+			  </p>
+			  <p>
+			    <%= f.submit 'Criar' %>
+			  </p>
+			<% end %>
+
+			<%= link_to 'Voltar', roles_path %>
+		</div>
+	</div>
+</div>
