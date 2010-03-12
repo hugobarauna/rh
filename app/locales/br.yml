@@ -33,10 +33,14 @@ br:
   activerecord:
     models:
       role: Cargo
+      benefit: Benefício
  
     attributes:
       role:
         name: Nome
+      benefit:
+        name: Nome
+        value: Valor
 
   web-app-theme: 
     save: Salvar

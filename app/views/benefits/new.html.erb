@@ -1,0 +1,29 @@
+<div id="block-forms" class="block">
+	<div class="secondary-navigation">
+	</div>
+
+	<div class="content">
+		<h2>Novo Benefício</h2>
+		<div class="inner">
+			<% form_for(@benefit) do |f| %>
+			  <%= f.error_messages %>
+
+			  <p>
+			    <%= f.label :name, 'Nome' %><br />
+			    <%= f.text_field :name %>
+			  </p>
+			
+			  <p>
+			    <%= f.label :value, 'Valor' %><br />
+			    <%= f.text_field :value %>
+			  </p>
+
+			  <p>
+			    <%= f.submit 'Criar' %>
+			  </p>
+			<% end %>
+
+			<%= link_to 'Voltar', benefits_path %>
+		</div>
+	</div>
+</div>

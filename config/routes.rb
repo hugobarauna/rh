@@ -1,5 +1,9 @@
 ActionController::Routing::Routes.draw do |map|
-  map.resources :roles
+  map.root :controller => "roles"
+  
+  map.resources :benefits, :except => :show
+
+  map.resources :roles, :except => :show
 
   # The priority is based upon order of creation: first created -> highest priority.
 

@@ -1,0 +1,36 @@
+<div id="block-tables" class="block">
+	<div class="secondary-navigation">
+	</div>
+	
+	<div class="content">
+    <h2 class="title">Listando Benefícios</h2>
+    <div class="inner">
+      <table class="table">
+				<tbody>
+					<tr>
+          	<th>Nome</th>
+						<th>Valor</th>
+           	<th class="last">&nbsp;</th>
+					</tr>
+					<% @benefits.each do |benefit| %>
+				  	<tr>
+							<td><%=h benefit.name %></td>
+							<td><%=h number_to_currency(benefit.value) %></td>
+				    	<td class="last">
+					    	<%= link_to 'Editar', edit_benefit_path(benefit) %> |
+				    		<%= link_to 'Deletar', benefit, :confirm => 'Você tem certeza?', :method => :delete %>
+							</td>
+				  	</tr>
+					<% end %>
+				</tbody>
+			</table>
+		
+			<div class="actions-bar wat-cf">
+        <div class="pagination">
+        </div>
+      </div>
+			<%= link_to 'Novo Benefício', new_benefit_path %>
+		</div>
+	</div>
+
+</div>
