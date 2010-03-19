@@ -1,10 +1,9 @@
 class CreateBenefits < ActiveRecord::Migration
   def self.up
     create_table :benefits do |t|
-      t.integer :employees_id
 	  t.string  :name
       t.decimal :value, :precision => 8, :scale => 2
-
+	  t.references :employee
       t.timestamps
     end
   end

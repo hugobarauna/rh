@@ -24,6 +24,19 @@
 			    <%= f.label :salary, 'Salário' %><br />
 			    <%= f.text_field :salary %>
 			  </p>
+			  
+			  <% f.fields_for :benefits do |b| %>
+				<p>
+					<%= b.label :name, 'Beneficio' %><br />
+					<%= b.text_field :name %>
+				</p>
+				
+				<p>
+				<%= b.label :value, 'Valor' %><br />
+				<%= b.text_field :value %>
+				</p>
+			  <% end %> 
+			  
 			  <p>
 			    <%= f.submit 'Criar' %>
 			  </p>

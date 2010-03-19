@@ -15,6 +15,7 @@ ActiveRecord::Schema.define(:version => 20100312230104) do
     t.integer  "employees_id"
     t.string   "name"
     t.decimal  "value",        :precision => 8, :scale => 2
+    t.integer  "employee_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
