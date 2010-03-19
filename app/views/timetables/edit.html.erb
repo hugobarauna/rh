@@ -1,0 +1,24 @@
+<h1>Editing timetable</h1>
+
+<% form_for(@timetable) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :employees_id %><br />
+    <%= f.text_field :employees_id %>
+  </p>
+  <p>
+    <%= f.label :entryHour %><br />
+    <%= f.datetime_select :entryHour %>
+  </p>
+  <p>
+    <%= f.label :departureHour %><br />
+    <%= f.datetime_select :departureHour %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @timetable %> |
+<%= link_to 'Back', timetables_path %>

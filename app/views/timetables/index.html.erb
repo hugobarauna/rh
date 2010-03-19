@@ -1,0 +1,24 @@
+<h1>Listing timetables</h1>
+
+<table>
+  <tr>
+    <th>Employees</th>
+    <th>Entryhour</th>
+    <th>Departurehour</th>
+  </tr>
+
+<% @timetables.each do |timetable| %>
+  <tr>
+    <td><%=h timetable.employees_id %></td>
+    <td><%=h timetable.entryHour %></td>
+    <td><%=h timetable.departureHour %></td>
+    <td><%= link_to 'Show', timetable %></td>
+    <td><%= link_to 'Edit', edit_timetable_path(timetable) %></td>
+    <td><%= link_to 'Destroy', timetable, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New timetable', new_timetable_path %>

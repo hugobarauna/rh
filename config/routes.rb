@@ -1,12 +1,18 @@
 ActionController::Routing::Routes.draw do |map|
-  map.resources :employees
+  #map.resources :timetables
 
+  #map.resources :employees
+
+  map.resources :employees, :has_many => :timetables
+  map.resources :employees, :has_many => :benefits
+  
   map.root :controller => "roles"
   
   map.resources :benefits, :except => :show
 
   map.resources :roles, :except => :show
-
+	
+  
   # The priority is based upon order of creation: first created -> highest priority.
 
   # Sample of regular route:

@@ -1,0 +1,23 @@
+<h1>New timetable</h1>
+
+<% form_for(@timetable) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :employees_id %><br />
+    <%= f.text_field :employees_id %>
+  </p>
+  <p>
+    <%= f.label :entryHour %><br />
+    <%= f.datetime_select :entryHour %>
+  </p>
+  <p>
+    <%= f.label :departureHour %><br />
+    <%= f.datetime_select :departureHour %>
+  </p>
+  <p>
+    <%= f.submit 'Create' %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', timetables_path %>
