@@ -4,7 +4,6 @@ class CreateTimetables < ActiveRecord::Migration
       t.integer :employees_id
       t.datetime :entryHour
       t.datetime :departureHour
-
       t.timestamps
     end
   end
