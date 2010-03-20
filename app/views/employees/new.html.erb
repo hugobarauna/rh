@@ -6,43 +6,9 @@
 		<h2>Novo Funcionário</h2>
 		<div class="inner">
 			<% form_for(@employee) do |f| %>
-			  <%= f.error_messages %>
-
-			  <p>
-			    <%= f.label :name, 'Nome' %><br />
-			    <%= f.text_field :name %>
-			  </p>
-			  <p>
-			    <%= f.label :hired_on, 'Contratado em' %><br />
-			    <%= f.date_select :hired_on %>
-			  </p>
-			  <p>
-			    <%= f.label :fired_on, 'Demitido em' %><br />
-			    <%= f.date_select :fired_on %>
-			  </p>			  
-			  <p>
-			    <%= f.label :salary, 'Salário' %><br />
-			    <%= f.text_field :salary %>
-			  </p>
-			  
-			  <% f.fields_for :benefits do |b| %>
-				<p>
-					<%= b.label :name, 'Beneficio' %><br />
-					<%= b.text_field :name %>
-				</p>
-				
-				<p>
-				<%= b.label :value, 'Valor' %><br />
-				<%= b.text_field :value %>
-				</p>
-			  <% end %> 
-			  
-			  <p>
-			    <%= f.submit 'Criar' %>
-			  </p>
+			  <%= render :partial => 'form', :object => f -%>
 			<% end %>
 
-			<%= link_to 'Voltar', roles_path %>
 		</div>
 	</div>
 </div>
