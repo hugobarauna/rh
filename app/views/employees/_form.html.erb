@@ -20,7 +20,7 @@
 
 <div id="roles">
 	<h3>Cargos</h3>
-	<%= collection_select(:employee, :role_id, Role.all, :id, :name) %> 
+	<%= select_tag 'employee[role_id]', options_from_collection_for_select(@roles, 'id', 'name') %>
 </div>
 
 <p>
