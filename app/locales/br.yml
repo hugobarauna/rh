@@ -45,7 +45,6 @@ br:
       employee:
         name: Nome
         hired_on: Contratado em
-        fired_on: Demitido em
         salary: Salário
 
   web-app-theme: 

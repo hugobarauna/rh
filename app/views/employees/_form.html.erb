@@ -1,3 +1,5 @@
+<%= form.error_messages %>
+
 <p>
   <%= form.label :name, 'Nome' %><br />
   <%= form.text_field :name %>
@@ -6,10 +8,6 @@
   <%= form.label :hired_on, 'Contratado em' %><br />
   <%= form.date_select :hired_on %>
 </p>
-<p>
-  <%= form.label :fired_on, 'Demitido em' %><br />
-  <%= form.date_select :fired_on %>
-</p>			  
 <p>
   <%= form.label :salary, 'Salário' %><br />
   <%= form.text_field :salary %>

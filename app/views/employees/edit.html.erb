@@ -1,28 +1,13 @@
-<h1>Editing employee</h1>
+<div id="block-forms" class="block">
+	<div class="secondary-navigation">
+	</div>
 
-<% form_for(@employee) do |f| %>
-  <%= f.error_messages %>
-
-  <p>
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
-  </p>
-  <p>
-    <%= f.label :hired_at %><br />
-    <%= f.datetime_select :hired_at %>
-  </p>
-  <p>
-    <%= f.label :fired_at %><br />
-    <%= f.datetime_select :fired_at %>
-  </p>
-  <p>
-    <%= f.label :salary %><br />
-    <%= f.text_field :salary %>
-  </p>
-  <p>
-    <%= f.submit 'Update' %>
-  </p>
-<% end %>
-
-<%= link_to 'Show', @employee %> |
-<%= link_to 'Back', employees_path %>
+	<div class="content">
+		<h2>Editando Funcionário</h2>
+		<div class="inner">
+			<% form_for(@employee) do |f| %>
+			  <%= render :partial => 'form', :object => f -%>
+			<% end %>
+		</div>
+	</div>
+</div>
