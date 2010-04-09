@@ -4,8 +4,9 @@ class CreateEmployees < ActiveRecord::Migration
       t.string  :name
       t.date    :hired_on
       t.decimal :salary, :precision => 8, :scale => 2
-	  t.timestamps
-	  t.references :role
+  	  t.references :role
+
+  	  t.timestamps
     end
   end
 

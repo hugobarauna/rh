@@ -27,6 +27,7 @@ ActiveRecord::Schema.define(:version => 20100320022717) do
     t.string   "name"
     t.date     "hired_on"
     t.decimal  "salary",     :precision => 8, :scale => 2
+    t.integer  "role_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -46,4 +47,3 @@ ActiveRecord::Schema.define(:version => 20100320022717) do
   end
 
 end
-
