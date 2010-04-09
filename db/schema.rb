@@ -30,6 +30,7 @@ ActiveRecord::Schema.define(:version => 20100320022717) do
     t.decimal  "salary",     :precision => 8, :scale => 2
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "role_id"
   end
 
   create_table "roles", :force => true do |t|

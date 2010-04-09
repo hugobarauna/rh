@@ -26,7 +26,8 @@ class EmployeesController < ApplicationController
   def new
     @employee = Employee.new
     @benefits = Benefit.all
-
+	@roles = Role.all
+	
     respond_to do |format|
       format.html # new.html.erb
       format.xml  { render :xml => @employee }

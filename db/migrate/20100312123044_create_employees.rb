@@ -6,6 +6,7 @@ class CreateEmployees < ActiveRecord::Migration
       t.date    :fired_on
       t.decimal :salary, :precision => 8, :scale => 2
 	  t.timestamps
+	  t.references :role
     end
   end
 

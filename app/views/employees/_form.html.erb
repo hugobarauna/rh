@@ -20,6 +20,11 @@
 	<%= select_tag 'employee[benefit_ids][]', options_from_collection_for_select(@benefits, 'id', 'name') %>
 </div>
 
+<div id="roles">
+	<h3>Cargos</h3>
+	<%= collection_select(:employee, :role_id, Role.all, :id, :name) %> 
+</div>
+
 <p>
   <%= form.submit 'Criar' %>
 </p>
