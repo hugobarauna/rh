@@ -25,9 +25,8 @@ class EmployeesController < ApplicationController
   # GET /employees/new.xml
   def new
     @employee = Employee.new
-	@employee.benefits.build
-	#2.times { @employee.benefits.build }
-	
+    @benefits = Benefit.all
+
     respond_to do |format|
       format.html # new.html.erb
       format.xml  { render :xml => @employee }

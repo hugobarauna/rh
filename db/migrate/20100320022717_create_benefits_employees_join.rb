@@ -8,6 +8,6 @@ class CreateBenefitsEmployeesJoin < ActiveRecord::Migration
   end
 
   def self.down
-	drop_table :benefits_employees
+  	drop_table :benefits_employees
   end
 end

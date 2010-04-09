@@ -1,32 +1,28 @@
-			  <p>
-			    <%= form.label :name, 'Nome' %><br />
-			    <%= form.text_field :name %>
-			  </p>
-			  <p>
-			    <%= form.label :hired_on, 'Contratado em' %><br />
-			    <%= form.date_select :hired_on %>
-			  </p>
-			  <p>
-			    <%= form.label :fired_on, 'Demitido em' %><br />
-			    <%= form.date_select :fired_on %>
-			  </p>			  
-			  <p>
-			    <%= form.label :salary, 'Salário' %><br />
-			    <%= form.text_field :salary %>
-			  </p>
+<p>
+  <%= form.label :name, 'Nome' %><br />
+  <%= form.text_field :name %>
+</p>
+<p>
+  <%= form.label :hired_on, 'Contratado em' %><br />
+  <%= form.date_select :hired_on %>
+</p>
+<p>
+  <%= form.label :fired_on, 'Demitido em' %><br />
+  <%= form.date_select :fired_on %>
+</p>			  
+<p>
+  <%= form.label :salary, 'Salário' %><br />
+  <%= form.text_field :salary %>
+</p>
 
-			  <div id="benefits">
-				<h3>Benefits</h3>
-				<% form.fields_for :benefits do |benefit_form| -%>
-				<%= render :partial => 'benefit', :locals => { :form => benefit_form } %>
-				<% end -%>
-			  <%= add_benefit_link(form) %>
-			  
-			  </div>
-			  
-			  <p>
-			    <%= form.submit 'Criar' %>
-			  </p>
-			
+<div id="benefits">
+	<h3>Benefícios</h3>
+	<%= select_tag 'employee[benefit_ids][]', options_from_collection_for_select(@benefits, 'id', 'name') %>
+</div>
 
-			<%= link_to 'Voltar', roles_path %>
+<p>
+  <%= form.submit 'Criar' %>
+</p>
+
+
+<%= link_to 'Voltar', roles_path %>
