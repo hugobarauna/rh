@@ -26,11 +26,9 @@ ActiveRecord::Schema.define(:version => 20100320022717) do
   create_table "employees", :force => true do |t|
     t.string   "name"
     t.date     "hired_on"
-    t.date     "fired_on"
     t.decimal  "salary",     :precision => 8, :scale => 2
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "role_id"
   end
 
   create_table "roles", :force => true do |t|
@@ -48,3 +46,4 @@ ActiveRecord::Schema.define(:version => 20100320022717) do
   end
 
 end
+

@@ -3,7 +3,6 @@ class CreateEmployees < ActiveRecord::Migration
     create_table :employees do |t|
       t.string  :name
       t.date    :hired_on
-      t.date    :fired_on
       t.decimal :salary, :precision => 8, :scale => 2
 	  t.timestamps
 	  t.references :role
