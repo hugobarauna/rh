@@ -7,6 +7,12 @@
 		<div class="inner">
 			<% form_for(@employee) do |f| %>
 			  <%= render :partial => 'form', :object => f -%>
+
+				<p>
+				  <%= f.submit 'Criar' %>
+				</p>
+
+				<%= link_to 'Voltar', employees_path %>
 			<% end %>
 		</div>
 	</div>

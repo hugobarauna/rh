@@ -13,19 +13,18 @@
   <%= form.text_field :salary %>
 </p>
 
-<div id="benefits">
-	<h3>Benefícios</h3>
-	<%= select_tag 'employee[benefit_ids][]', options_from_collection_for_select(@benefits, 'id', 'name') %>
-</div>
-
-<div id="roles">
-	<h3>Cargos</h3>
-	<%= select_tag 'employee[role_id]', options_from_collection_for_select(@roles, 'id', 'name') %>
-</div>
-
 <p>
-  <%= form.submit 'Criar' %>
+	Cargo <br>
+	<%= select_tag 'employee[role_id]', options_from_collection_for_select(@roles, 'id', 'name', @employee.try(:role).try(:id)) %>	
 </p>
 
 
-<%= link_to 'Voltar', roles_path %>
+<h3>Benefícios</h3>
+<div id="benefits">
+	<% @employee.benefit_ids.each do |benefit_id| %>
+		<%= select_tag 'employee[benefit_ids][]', options_from_collection_for_select(@benefits, 'id', 'name', benefit_id)%>
+		<br />
+	<% end %>
+
+	<%= add_benefit_link %>
+</div>

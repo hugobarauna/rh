@@ -1,2 +1,4 @@
-// Place your application-specific JavaScript functions and classes here
-// This file is automatically included by javascript_include_tag :defaults
+function add_benefit(link, content) {  
+    var new_id = new Date().getTime();    
+    $(link).before(content.replace("NEW_RECORD", new_id));  
+}
