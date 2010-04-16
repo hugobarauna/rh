@@ -46,6 +46,7 @@ br:
         name: Nome
         hired_on: Contratado em
         salary: Salário
+        bank_account_number: Conta do banco
 
   web-app-theme: 
     save: Salvar

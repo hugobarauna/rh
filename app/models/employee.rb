@@ -1,6 +1,6 @@
 class Employee < ActiveRecord::Base
-  validates_presence_of :name, :salary
-  validates_numericality_of :salary, :allow_nil => true
+  validates_presence_of :name, :salary, :bank_account_number
+  validates_numericality_of :salary, :bank_account_number, :allow_nil => true
 
   belongs_to :role
   has_and_belongs_to_many :benefits

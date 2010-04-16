@@ -15,7 +15,6 @@
 					  <tr>
 					    <td><%=h employee.name %></td>
 							<td class="last">
-						    <%= link_to 'Visualizar', employee %>
 						    <%= link_to 'Editar', edit_employee_path(employee) %>
 						    <%= link_to 'Deletar', employee, :confirm => 'Você tem certeza?', :method => :delete %>
 							</td>
